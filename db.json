@@ -1,0 +1,561 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "src": "/images/bg2.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 2,
+      "src": "/images/body.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 3,
+      "src": "/images/body2.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 4,
+      "src": "/images/children.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 5,
+      "src": "/images/children2.webp",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 6,
+      "src": "/images/galery (1).jpg",
+      "title": "galery2",
+      "ctg": "galery"
+    },
+    {
+      "id": 7,
+      "src": "/images/galery (2).jpg",
+      "title": "galery1",
+      "ctg": "galery"
+    },
+    {
+      "id": 8,
+      "src": "/images/galery (3).jpg",
+      "title": "galery2",
+      "ctg": "galery"
+    },
+    {
+      "id": 9,
+      "src": "/images/galery (4).jpg",
+      "title": "galery1",
+      "ctg": "galery"
+    },
+    {
+      "id": 10,
+      "src": "/images/galery (5).jpg",
+      "title": "galery2",
+      "ctg": "galery"
+    },
+    {
+      "id": 11,
+      "src": "/images/galery (6).jpg",
+      "title": "galery1",
+      "ctg": "galery"
+    },
+    {
+      "id": 12,
+      "src": "/images/galery (7).jpg",
+      "title": "galery2",
+      "ctg": "galery"
+    },
+    {
+      "id": 13,
+      "src": "/images/galery (8).jpg",
+      "title": "galery1",
+      "ctg": "galery"
+    },
+    {
+      "id": 14,
+      "src": "/images/galery (9).jpg",
+      "title": "galery2",
+      "ctg": "galery"
+    },
+    {
+      "id": 15,
+      "src": "/images/galery (10).jpg",
+      "title": "galery1",
+      "ctg": "galery"
+    },
+    {
+      "id": 16,
+      "src": "/images/galery (11).jpg",
+      "title": "galery2",
+      "ctg": "galery"
+    },
+    {
+      "id": 17,
+      "src": "/images/galery (12).jpg",
+      "title": "galery1",
+      "ctg": "galery"
+    },
+    {
+      "id": 18,
+      "src": "/images/galery (13).jpg",
+      "title": "galery2",
+      "ctg": "galery"
+    },
+    {
+      "id": 19,
+      "src": "/images/galery (14).jpg",
+      "title": "galery1",
+      "ctg": "galery"
+    },
+    {
+      "id": 20,
+      "src": "/images/galery (15).jpg",
+      "title": "galery2",
+      "ctg": "galery"
+    },
+    {
+      "id": 21,
+      "src": "/images/header2.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 22,
+      "src": "/images/info1.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 23,
+      "src": "/images/info2.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 24,
+      "src": "/images/Instagram.svg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 25,
+      "src": "/images/item (1).png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 26,
+      "src": "/images/item (2).png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 27,
+      "src": "/images/item (3).png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 28,
+      "src": "/images/item (4).png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 29,
+      "src": "/images/item (5).png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 30,
+      "src": "/images/item (6).png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 31,
+      "src": "/images/item (7).png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 32,
+      "src": "/images/item (8).png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 33,
+      "src": "/images/logo.png",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 34,
+      "src": "/images/markaz1.jpeg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 35,
+      "src": "/images/markaz1.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 36,
+      "src": "/images/markaz2.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 37,
+      "src": "/images/menu.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 38,
+      "src": "/images/mony.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 39,
+      "src": "/images/parking.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 40,
+      "src": "/images/Proposal.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 41,
+      "src": "/images/section-bg-3.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 42,
+      "src": "/images/section-bg-8.jpg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 45,
+      "src": "/images/Telegram.svg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 46,
+      "src": "/images/WhatsApp.svg",
+      "title": "images",
+      "ctg": "images"
+    },
+    {
+      "id": 47,
+      "src": "/images/box1.jpeg",
+      "title": "mixbox",
+      "ctg": "mixbox",
+      "name": " باکس 1",
+      "price": 350000
+    },
+    {
+      "id": 48,
+      "src": "/images/box2.jpeg",
+      "title": "mixbox",
+      "ctg": "mixbox",
+      "name": " باکس 2",
+      "price": 350000
+    },
+    {
+      "id": 49,
+      "src": "/images/box3.jpeg",
+      "title": "mixbox",
+      "ctg": "mixbox",
+      "name": " باکس 3",
+      "price": 200000
+    },
+    {
+      "id": 50,
+      "src": "/images/box4.jpeg",
+      "title": "mixbox",
+      "ctg": "mixbox",
+      "name": " باکس 4",
+      "price": 300000
+    },
+    {
+      "id": 52,
+      "src": "/images/garch-pish.jpeg",
+      "title": "pish",
+      "ctg": "pish",
+      "name": "قارچ سوخاری",
+      "price": 100000
+    },
+    {
+      "id": 53,
+      "src": "/images/hotdog-pish.jpeg",
+      "title": "pish",
+      "ctg": "pish",
+      "name": "کراکف سوخاری",
+      "price": 90000
+    },
+    {
+      "id": 54,
+      "src": "/images/naget-pish.jpeg",
+      "title": "pish",
+      "ctg": "pish",
+      "name": "ناگت سوخاری",
+      "price": 70000
+    },
+    {
+      "id": 55,
+      "src": "/images/panir-pish.jpeg",
+      "title": "pish",
+      "ctg": "pish",
+      "name": "پنیر سوخاری",
+      "price": 70000
+    },
+    {
+      "id": 58,
+      "src": "/images/chilenfileh-sandwich.jpeg",
+      "title": "sandwich",
+      "ctg": "sandwich",
+      "name": " چیکن فیله",
+      "price": 120000
+    },
+    {
+      "id": 59,
+      "src": "/images/dabeldab-sandwich.jpeg",
+      "title": "sandwich",
+      "ctg": "sandwich",
+      "name": " دابل داب",
+      "price": 250000
+    },
+    {
+      "id": 601,
+      "src": "/images/zinger-sandwich.jpeg",
+      "title": "sandwich",
+      "ctg": "sandwich",
+      "name": " زینگر",
+      "price": 100000,
+      "q": 0
+    },
+    {
+      "id": 60,
+      "src": "/images/zinger-sandwich.jpeg",
+      "title": "sandwich",
+      "ctg": "sandwich",
+      "name": " زینگر پان",
+      "price": 120000,
+      "q": 0
+    },
+    {
+      "id": 62,
+      "src": "/images/bal20-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari"
+    },
+    {
+      "id": 63,
+      "src": "/images/balhot-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari",
+      "name": "بال سوخاری",
+      "price": 100000
+    },
+    {
+      "id": 64,
+      "src": "/images/estrips-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari",
+      "name": "فیله استریپتس",
+      "price": 300000
+    },
+    {
+      "id": 65,
+      "src": "/images/file-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari",
+      "name": "فیله سوخاری",
+      "price": 200000
+    },
+    {
+      "id": 67,
+      "src": "/images/goge-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari",
+      "name": "جوجه سوخاری",
+      "price": 150000
+    },
+    {
+      "id": 68,
+      "src": "/images/morgh2-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari",
+      "name": "مرغ سوخاری2 تکه",
+      "price": 50000
+    },
+    {
+      "id": 69,
+      "src": "/images/morgh3-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari",
+      "name": "مرغ سوخاری 3 تکه",
+      "price": 100000
+    },
+    {
+      "id": 70,
+      "src": "/images/morgh9-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari",
+      "name": "مرغ سوخاری 9 تکه",
+      "price": 250000
+    },
+    {
+      "id": 650,
+      "src": "/images/file-sokhari.jpeg",
+      "title": "sokhari",
+      "ctg": "sokhari",
+      "name": "فیله سوخاری",
+      "price": 200000
+    },
+    {
+      "id": 73,
+      "src": "/images/chdar-sib.jpeg",
+      "title": "sib",
+      "ctg": "sib",
+      "name": "سیب پنیری",
+      "price": 10000
+    },
+    {
+      "id": 77,
+      "src": "/images/sib-sokhari.jpeg",
+      "title": "sib",
+      "ctg": "sib",
+      "name": "سیب سوخاری",
+      "price": 100000
+    },
+    {
+      "id": 75,
+      "src": "/images/dog-sib.jpeg",
+      "title": "sib",
+      "ctg": "sib",
+      "name": "داگ چیزفرایز",
+      "price": 150000
+    },
+    {
+      "id": 770,
+      "src": "/images/sib-sokhari.jpeg",
+      "title": "sib",
+      "ctg": "sib",
+      "name": "سیب سوخاری",
+      "price": 100000
+    },
+    {
+      "id": 79,
+      "src": "/images/fanta-nosh.jpeg",
+      "title": "noshidani",
+      "ctg": "noshidani",
+      "name": "نوشابه فانتا",
+      "price": 10000
+    },
+    {
+      "id": 80,
+      "src": "/images/heyday-nosh.jpeg",
+      "title": "noshidani",
+      "ctg": "noshidani",
+      "name": "نوشابه هی دی",
+      "price": 10000
+    },
+    {
+      "id": 81,
+      "src": "/images/koka-nosh.jpeg",
+      "title": "noshidani",
+      "ctg": "noshidani",
+      "name": "نوشابه کولا",
+      "price": 10000
+    },
+    {
+      "id": 82,
+      "src": "/images/livani-nosh.jpeg",
+      "title": "noshidani",
+      "ctg": "noshidani",
+      "name": "نوشابه لیوانی",
+      "price": 20000
+    },
+    {
+      "id": 84,
+      "src": "/images/sprite-nosh.jpeg",
+      "title": "noshidani",
+      "ctg": "noshidani",
+      "name": "نوشابه اسپرایت",
+      "price": 10000
+    },
+    {
+      "id": 85,
+      "src": "/images/water-nosh.jpeg",
+      "title": "noshidani",
+      "ctg": "noshidani",
+      "name": "آب",
+      "price": 5000
+    }
+  ],
+  "users": [
+    {
+      "name": "amirhosein",
+      "email": "amir@gmail.com",
+      "phone": "09195602898",
+      "password": "amir2898",
+      "id": 1
+    },
+    {
+      "name": "amirhosein",
+      "email": "amir2222@gmail.com",
+      "phone": "09195602898",
+      "password": "amir2898",
+      "id": 2
+    },
+    {
+      "name": "amirhosein",
+      "email": "amir12345@gmail.com",
+      "phone": "09195602898",
+      "password": "amir2898",
+      "id": 3
+    },
+    {
+      "name": "ali",
+      "email": "ali12@gmail.com",
+      "phone": "09194308676",
+      "password": "amir2898",
+      "id": 4
+    }
+  ],
+  "cart": [],
+  "comments": [
+    {
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "id": 1
+    },
+    {
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "id": 2
+    },
+    {
+      "text": "این پیام تست است جهت ازمایش",
+      "id": 3
+    }
+  ]
+}

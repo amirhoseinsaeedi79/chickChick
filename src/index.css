@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family:"Vazir";
+    src: url("../public/fonts/Vazir.woff") format("woff");
+  }
+@layer utilities {
+  .flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-col-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-call{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bg-tablet{
+    background-image:linear-gradient(RGBA(10,10,10,0.57),RGBA(10,10,10,0.57)),url('./asset/images/header2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .bg-pish{
+    background-image:linear-gradient(RGBA(10,10,10,0.33),RGBA(10,10,10,0.33)),url('./asset/images/pish-title.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bg-mix{
+    background-image:linear-gradient(RGBA(10,10,10,0.33),RGBA(10,10,10,0.33)),url('./asset/images/mix-title.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  } .bg-nosh{
+    background-image:linear-gradient(RGBA(10,10,10,0.33),RGBA(10,10,10,0.33)),url('./asset/images/nosh-title.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  } .bg-sandwich{
+    background-image:linear-gradient(RGBA(10,10,10,0.33),RGBA(10,10,10,0.33)),url('./asset/images/sandwich-title.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  } .bg-sokhari{
+    background-image:linear-gradient(RGBA(10,10,10,0.33),RGBA(10,10,10,0.33)),url('./asset/images/title-sokhari.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  } 
+  .bg-sib{
+    background-image:linear-gradient(RGBA(10,10,10,0.33),RGBA(10,10,10,0.33)),url('./asset/images/sib-title.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bg-proposal{
+    background-image:linear-gradient(RGBA(10,10,10,0.50),RGBA(10,10,10,0.50)),url('./asset/images/Proposal.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  background-size:cover;
+  }
+  .bg1{
+    background-image:linear-gradient(RGBA(10,10,10,0.60),RGBA(10,10,10,0.60)),url('./asset/images/Proposal.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  background-size:cover;
+  }
+  .bg2{
+    background-image:linear-gradient(RGBA(10,10,10,0.60),RGBA(10,10,10,0.60)),url('./asset/images/body3.jpg');
+    background-repeat: no-repeat;
+  background-size:cover;
+  }
+  .bgfooter{
+    background-image:linear-gradient(RGBA(10,10,10,0.97),RGBA(10,10,10,0.97)),url('./asset/images/body3.jpg');
+    background-repeat: no-repeat;
+  background-size:cover;
+  }
+  .bgCompany{
+    background-image:url('./asset/images/body2.jpg');
+    background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  }
+  .bgHome{
+    background-image:url('./asset/images/bghome.jpg');
+    background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  }
+  .bgcall{
+    background-image:url('./asset/images/section-bg-3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .text-shadow{
+    text-shadow: 1px 1px 3px rgb(255, 0, 0);
+  }
+.vazir{
+  font-family:"Vazir";
+}
+.vazir-bold{
+  font-family:"Vazir";
+  font-weight: bold;
+}
+.error{
+  color: red;
+  margin-bottom: 10px;
+  font-family:"Vazir";
+}
+.active{
+  color: rgb(255, 111, 0);
+}
+
+.swal2-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+}
+
+
+
