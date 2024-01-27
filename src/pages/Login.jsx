@@ -15,7 +15,7 @@ export default function Login() {
   } = useForm();
 
   async function loginHandler(data) {
-    fetch("http://localhost:3000/users")
+    fetch("https://chickchick-server.liara.run/users")
       .then((res) => res.json())
       .then((alldatas) => {
         let newtest = alldatas.find(function (users) {

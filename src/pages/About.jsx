@@ -25,7 +25,7 @@ export default function About() {
       <div data-aos="zoom-in" className="text-white leading-[30px] md:leading-[40px] text-md md:text-[22px] text-center px-4 md:px-10 vazir-bold mb-5  md:mb-10">
       <p>ما از سال 1380 با یک شعبه و با یک منویی که فقط سیب زمینی سرخ شده داشت در منطقه ای در حنوب تهران شروع بکار کردبم ویا همت و تلاش و پشنیبانی شما عزیزان بعد از 22 سال دوشعبه فعال در ولنجک و آجودانیه در تهران داریم که هر کدام منوهای متنوع و با کیفیت و حداقل 10 نوع محصول را دارند وباعث افتخار ماست که میزبان شما عزیزان باشیم</p>
       </div>
-      <div className="w-full h-[260px] bg-[url(src/asset/images/info1.jpg)] bg-no-repeat bg-cover bg-fixed "></div>
+      <div className="w-full h-[260px] bg-about"></div>
 
       <div className=" flex-col-center relative my-5 md:my-10">
         <h3 className="drop-shadow-xl text-black absolute text-[26px] vazir-bold">
@@ -45,7 +45,7 @@ export default function About() {
         </div>
       </div>
       <div className="flex-col-center  md:flex-row-center pb-5 md:pb-10">
-        <div data-aos="fade-right" className="w-11/12 md:mx-4 md:w-7/12 lg:w-5/12"><img className="w-[365px] mb-4 md:mb-0 h-[200px] md:w-[600px]  md:h-[350px]  rounded-2xl" src="src/asset/images/info2.jpg" alt="info2" /></div>
+        <div data-aos="fade-right" className="w-11/12 md:mx-4 md:w-7/12 lg:w-5/12"><img className="w-[365px] mb-4 md:mb-0 h-[200px] md:w-[600px]  md:h-[350px]  rounded-2xl" src="images/info2.jpg" alt="info2" /></div>
         <div data-aos="fade-left" className="w-11/12 md:mx-4 md:w-7/12 lg:w-5/12 text-white md:text-xl lg:text-[22px] vazir-bold text-center flex items-center "><p className="max-h[200px] md:max-h-[350px] leading-[30px] md:leading-[40px]">در این مجموعه با بیش  از 10 مدل محصول در منو ها اماده پذیرایی و خدمت رسانی به شما عزیزان هست که شامل : انواع مرغ های سوخاری شده با پودر سوخاری کی اف سی که کیفیت که کیفیت محصولات را خیلی عالی میکند / انواع سیب زمینی سرخ شده / انواع سوخاری های مختلف از جمله پنیر سوخاری و... / انواع ساندویچ ها و انواع پک های ترکیبی با قیمت های اقتصادی برای شما  </p></div>
       </div>
 

@@ -45,28 +45,28 @@ export default function Company() {
         className="mySwiper  "
       >
         <SwiperSlide >
-            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="/src/asset/images/item (1).png" alt="" />
+            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="images/item (1).png" alt="" />
         </SwiperSlide>
         <SwiperSlide >
-            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="/src/asset/images/item (2).png" alt="" />
+            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="images/item (2).png" alt="" />
         </SwiperSlide>
         <SwiperSlide >
-            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="/src/asset/images/item (3).png" alt="" />
+            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="images/item (3).png" alt="" />
         </SwiperSlide>
          <SwiperSlide >
-            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="/src/asset/images/item (4).png" alt="" />
+            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="images/item (4).png" alt="" />
         </SwiperSlide>
          <SwiperSlide >
-            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="/src/asset/images/item (5).png" alt="" />
+            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="images/item (5).png" alt="" />
         </SwiperSlide>
         <SwiperSlide >
-            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="/src/asset/images/item (6).png" alt="" />
+            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="images/item (6).png" alt="" />
         </SwiperSlide>
         <SwiperSlide >
-            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="/src/asset/images/item (7).png" alt="" />
+            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="images/item (7).png" alt="" />
         </SwiperSlide>
         <SwiperSlide >
-            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="/src/asset/images/item (8).png" alt="" />
+            <img className="w-32 h-32 cursor-pointer grayscale-[100%] hover:grayscale-0" src="images/item (8).png" alt="" />
         </SwiperSlide>
 
          

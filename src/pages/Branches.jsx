@@ -16,7 +16,7 @@ export default function Branches() {
           <h5 className="text-white text-[24px] md:text-[28px] mb-4 vazir-bold">شعبه آجودانیه</h5>
           <img
             className="w-[400px] h-[300px] md:h-[360px]"
-            src="src/asset/images/shobeh1.png"
+            src="images/shobeh1.png"
             alt=""
           />
           <div className="w-full h-[300px] md:h-[360px] absolute top-[60px] z-20 bg2 text-center text-white opacity-0 hover:opacity-100 flex-col-center border-2 border-orange-500 ">
@@ -38,7 +38,7 @@ export default function Branches() {
           <h5 className="text-white text-[24px] md:text-[28px] mb-4 vazir-bold mt-7 md:mt-0">شعبه ولنجک</h5>
           <img
             className="w-[400px] h-[300px] md:h-[360px]"
-            src="src/asset/images/shobeh2.jpg"
+            src="images/shobeh2.jpg"
             alt=""
           />
           <div className="w-full h-[300px] md:h-[360px] absolute top-[60px] z-20 bg2 text-center text-white opacity-0 hover:opacity-100 flex-col-center border-2 border-orange-500 ">

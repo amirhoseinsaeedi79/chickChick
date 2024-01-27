@@ -187,7 +187,7 @@ export default function Arsh() {
           طبخ انواع سوخاری و ساندویچ های مختلف با کیفیت بالا باعث ایجاد تنوع
           بالای غذایی در این شعبه شده است{" "}
         </p>
-        <div className="w-full h-[300px] flex-col-center text-white bg-[url(src/asset/images/menu.jpg)] bg-fixed"></div>
+        <div className="w-full h-[300px] flex-col-center text-white bg-menu"></div>
 
         <span
           data-aos="zoom-in"
@@ -202,7 +202,7 @@ export default function Arsh() {
           برای رفاه حال مشتریان عزیز در این مجموعه پارکینک اختصاصی داریم تا شما
           عزیزان بدون دغدغه جای پارک از لحظات خوب خودتون لذت ببرید
         </p>
-        <div className="w-full h-[300px] flex-col-center text-white bg-[url(src/asset/images/parking.jpg)] bg-fixed bg-no-repeat bg-cover"></div>
+        <div className="w-full h-[300px] flex-col-center text-white bg-parking"></div>
 
         <span
           data-aos="zoom-in"
@@ -217,7 +217,7 @@ export default function Arsh() {
           این مجموعه با داشتن فضای بازی برای کودکان شما امکانات سرگرمی و ایجاد
           یک روز به یادموندنی رو برای کودکان شما راهم کرده است
         </p>
-        <div className="w-full h-[300px] flex-col-center text-white bg-[url(src/asset/images/children.jpg)] bg-fixed bg-no-repeat bg-cover"></div>
+        <div className="w-full h-[300px] flex-col-center text-white bg-children"></div>
         <span
           data-aos="zoom-in"
           className="text-orange-500 text-[26px] py-5 vazir-bold "
@@ -232,7 +232,7 @@ export default function Arsh() {
           ما در فضای شیک و دلنشین مجموعه آجودانیه برای شما عزیزان یک روز عالی و
           به یادموندنی رو همراه با غذاهای عالی میسازیم
         </p>
-        <div className="w-full h-[300px] flex-col-center text-white bg-[url(src/asset/images/markaz1.jpeg)] bg-fixed bg-no-repeat bg-cover"></div>
+        <div className="w-full h-[300px] flex-col-center text-white bg-markaz1"></div>
       </div>
       <div className=" flex-col-center relative my-5 md:my-10">
         <h3 className="drop-shadow-xl text-black absolute text-[26px] vazir-bold">

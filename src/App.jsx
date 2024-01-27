@@ -24,7 +24,7 @@ useEffect(() =>{
 
   useEffect(() => {
     
-    fetch("http://localhost:3000/images")
+    fetch("https://chickchick-server.liara.run/images")
       .then((res) => res.json())
       .then((data) => {
         let isname = data.filter((item) => {
@@ -33,7 +33,7 @@ useEffect(() =>{
         setPishmenu(isname);
       });
 
-    fetch("http://localhost:3000/images")
+    fetch("https://chickchick-server.liara.run/images")
       .then((res) => res.json())
       .then((data) => {
         let isitem = data.filter((item) => {

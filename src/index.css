@@ -31,6 +31,45 @@
     background-attachment: fixed;
     background-size: cover;
   }
+  /* ==================================== */
+  .bg-about{
+    background-image:url('./asset/images/info1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .bg-menu{
+    background-image:url('./asset/images/menu.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .bg-parking{
+    background-image:url('./asset/images/parking.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .bg-children{
+    background-image:url('./asset/images/children.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .bg-markaz2{
+    background-image:url('./asset/images/markaz2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .bg-markaz1{
+    background-image:url('./asset/images/markaz1.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  /* ==================================== */
   .bg-pish{
     background-image:linear-gradient(RGBA(10,10,10,0.33),RGBA(10,10,10,0.33)),url('./asset/images/pish-title.jpeg');
     background-repeat: no-repeat;

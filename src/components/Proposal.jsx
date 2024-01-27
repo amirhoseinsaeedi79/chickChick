@@ -7,7 +7,7 @@ export default function Proposal() {
         <div data-aos="flip-left"  data-aos-easing="ease-out-cubic" data-aos-duration="1500">
           <img
             className="w-[180px] h-[130px]  md:w-[250px] md:h-[200px] lg:w-[300px] lg:h-[230px] xl:w-[400px] xl:h-[330px] rounded-full border-4 border-orange-400  "
-            src="/src/asset/images/mony.jpg"
+            src="images/mony.jpg"
             alt="Proposal"
           />
         </div>

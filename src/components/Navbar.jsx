@@ -260,14 +260,14 @@ export default function Navbar() {
           <div className=" lg:hidden ">
             <img
               className=" cursor-pointer w-[52px] h-[52px] mt-[2px] mr-8 rounded-full"
-              src="/src/asset/images/logo.png"
+              src="images/logo.png"
               alt="logo"
             />
           </div>
           <div className=" cursor-pointer hidden  lg:flex flex-row justify-between">
             <img
               className="lg:w-[75px] h-[75px] mr-8 rounded-full"
-              src="/src/asset/images/logo.png"
+              src="images/logo.png"
               alt="logo"
             />
           </div>
@@ -293,12 +293,12 @@ export default function Navbar() {
           </div>
           {/* ================================================================================= hamburgerMenu */}
           <div
-            className={`${menu} flex-col bgcall  w-[50vh] min-h-screen fixed top-0 right-0 z-10 border-2 border-orange-500  `}
+            className={`${menu} flex-col bgcall  w-[290px] min-h-screen fixed top-0 right-0 z-10 border-2 border-orange-500  `}
           >
             <div className="flex-col-center pt-3  relative">
               <img
                 className=" w-[60px] h-[60px] rounded-full "
-                src="/src/asset/images/logo.png"
+                src="images/logo.png"
                 alt=""
               />
               <div

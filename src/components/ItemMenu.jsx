@@ -8,7 +8,7 @@ export default function ItemMenu(item) {
   const login = contextitem.isLoggin;
 
   async function cartHandler(item){
-    fetch("http://localhost:3000/cart")
+    fetch("https://chickchick-server.liara.run/cart")
       .then((res) => res.json())
       .then((data) => {
         const isin = data.some((allitem) => {
@@ -27,7 +27,7 @@ export default function ItemMenu(item) {
             price: findMenu.price,
             q: 1,
           };
-          fetch("http://localhost:3000/cart", {
+          fetch("https://chickchick-server.liara.run/cart", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -45,7 +45,7 @@ export default function ItemMenu(item) {
             theme: "colored",
           });
         } else if (!login) {
-          toast.error("لطفا ابتدا وارد حساب خود شوید", {
+          toast.error("لطفا ابتدا وارد حساب خود شوید",{
             position: "top-center",
             autoClose: 1500,
             hideProgressBar: false,

@@ -1,62 +1,57 @@
 import MenuHome from "./MenuHome";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import RegisterContext from "../context/register";
 import { useContext } from "react";
 
 export default function Galeri() {
-
   const contextitem = useContext(RegisterContext);
-  const login = contextitem.isLoggin
+  const login = contextitem.isLoggin;
 
   const {
     register,
     handleSubmit,
     getValues,
     reset,
-    formState:{errors},
+    formState: { errors },
   } = useForm();
 
   const registerHandler = () => {
-if (login) {
-  const alldata=getValues()
-  fetch("http://localhost:3000/comments",{
-   method:'POST',
-   headers:{
-     "content-type":"application/json"
-   },
-   body:JSON.stringify(alldata)
- }).then((res)=>res.json())
- .then((result)=>console.log(result))
- reset()
- toast.success('نظر شما ثبت شد ودر انتظار تایید مدیر میباشد', {
-   position: "top-center",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-    });
-  
-}else{
- toast.error('برای ثبت نظر لطفا ابتدا ثبت نام کنید', {
-   position: "top-center",
-    autoClose:3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-    });
-
-}
-}
-
-
-  
+    if (login) {
+      const alldata = getValues();
+      fetch("http://localhost:3000/comments", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(alldata),
+      })
+        .then((res) => res.json())
+        .then((result) => console.log(result));
+      reset();
+      toast.success("نظر شما ثبت شد ودر انتظار تایید مدیر میباشد", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      toast.error("برای ثبت نظر لطفا ابتدا ثبت نام کنید", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+  };
 
   return (
     <div className="w-full bgcall bg-no-repeat mt-[55px] ">
@@ -179,7 +174,10 @@ if (login) {
           </div>
         </div>
 
-        <span data-aos="zoom-in" className="text-orange-500 text-[26px] pb-5 vazir-bold ">
+        <span
+          data-aos="zoom-in"
+          className="text-orange-500 text-[26px] pb-5 vazir-bold "
+        >
           منوی غذایی متنوع
         </span>
         <p
@@ -189,9 +187,12 @@ if (login) {
           طبخ انواع سوخاری و ساندویچ های مختلف با کیفیت بالا باعث ایجاد تنوع
           بالای غذایی در این شعبه شده است{" "}
         </p>
-        <div className="w-full h-[300px] flex-col-center text-white bg-[url(src/asset/images/menu.jpg)] bg-fixed"></div>
+        <div className="w-full h-[300px] flex-col-center text-white bg-menu"></div>
 
-        <span data-aos="zoom-in" className="text-orange-500 text-[26px] py-5 vazir-bold ">
+        <span
+          data-aos="zoom-in"
+          className="text-orange-500 text-[26px] py-5 vazir-bold "
+        >
           پارکینک اختصاصی
         </span>
         <p
@@ -201,9 +202,12 @@ if (login) {
           برای رفاه حال مشتریان عزیز در این مجموعه پارکینک اختصاصی داریم تا شما
           عزیزان بدون دغدغه جای پارک از لحظات خوب خودتون لذت ببرید
         </p>
-        <div className="w-full h-[300px] flex-col-center text-white bg-[url(src/asset/images/parking.jpg)] bg-fixed bg-no-repeat bg-cover"></div>
+        <div className="w-full h-[300px] flex-col-center text-white bg-parking"></div>
 
-        <span data-aos="zoom-in" className="text-orange-500 text-[26px] py-5 vazir-bold ">
+        <span
+          data-aos="zoom-in"
+          className="text-orange-500 text-[26px] py-5 vazir-bold "
+        >
           فضای بازی کودکان
         </span>
         <p
@@ -213,8 +217,11 @@ if (login) {
           این مجموعه با داشتن فضای بازی برای کودکان شما امکانات سرگرمی و ایجاد
           یک روز به یادموندنی رو برای کودکان شما راهم کرده است
         </p>
-        <div className="w-full h-[300px] flex-col-center text-white bg-[url(src/asset/images/children.jpg)] bg-fixed bg-no-repeat bg-cover"></div>
-        <span data-aos="zoom-in" className="text-orange-500 text-[26px] py-5 vazir-bold ">
+        <div className="w-full h-[300px] flex-col-center text-white bg-children"></div>
+        <span
+          data-aos="zoom-in"
+          className="text-orange-500 text-[26px] py-5 vazir-bold "
+        >
           محیط شیک و عالی
         </span>
         <p
@@ -225,7 +232,7 @@ if (login) {
           ما در فضای شیک و دلنشین مجموعه گالریا برای شما عزیزان یک روز عالی و به
           یادموندنی رو همراه با غذاهای عالی میسازیم
         </p>
-        <div className="w-full h-[300px] flex-col-center text-white bg-[url(src/asset/images/markaz2.jpg)] bg-fixed bg-no-repeat bg-cover"></div>
+        <div className="w-full h-[300px] flex-col-center text-white bg-markaz2"></div>
       </div>
       <div className=" flex-col-center relative my-5 md:my-10">
         <h3 className="drop-shadow-xl text-black absolute text-2xl text-[26px] vazir-bold">
@@ -265,35 +272,47 @@ if (login) {
 
       <div className="allcoment">
         <div className="container flex-col-center ">
-        <div
-             className={`container w-10/12 md:w-1/2 border-4 border-orange-500 text-white rounded-[20px] bg2 my-10`}
+          <div
+            className={`container w-10/12 md:w-1/2 border-4 border-orange-500 text-white rounded-[20px] bg2 my-10`}
           >
-            <form onSubmit={handleSubmit(registerHandler)} className=" flex-col-center  px-2">
+            <form
+              onSubmit={handleSubmit(registerHandler)}
+              className=" flex-col-center  px-2"
+            >
               <h5 className="text-2xl vazir-bold py-5">ثبت نظر جدید</h5>
 
-              <label className="text-[16px] w-full text-end mr-7 vazir my-2" htmlFor="#text">
+              <label
+                className="text-[16px] w-full text-end mr-7 vazir my-2"
+                htmlFor="#text"
+              >
                 : نظر خودرا وارد کنید
               </label>
               <textarea
-             {...register('text',{
-              required:'لطفا متن پیام خودرا وارد کنید',
-              minLength:{
-                value:20,
-                message:'حداقل طول پیام باید 20 کاراکتر باشد'
-              },
-              maxLength:{
-                value:200,
-                message:'حداکثر طول پیام باید 200 کاراکتر باشد'
-              }
-             })} 
+                {...register("text", {
+                  required: "لطفا متن پیام خودرا وارد کنید",
+                  minLength: {
+                    value: 20,
+                    message: "حداقل طول پیام باید 20 کاراکتر باشد",
+                  },
+                  maxLength: {
+                    value: 200,
+                    message: "حداکثر طول پیام باید 200 کاراکتر باشد",
+                  },
+                })}
                 id="text"
                 className="rounded-[15px] text-black w-[95%] h-[120px]  md:h-[150px]  border-4 border-orange-500 focus:outline-none text-xl vazir py-3 px-5"
                 cols="46"
                 rows="5"
               ></textarea>
-              <div className="error mt-3 text-lg">{errors.text && errors.text.message}</div>
-              <button  className="text-[18px] py-2 hover:bg-white hover:text-black  border-4 border-orange-500 cursor-pointer vazir-bold rounded-[15px] p-5 sm:px-7 mx-2 mb-4"
-                  type="submit" >ارسال</button>
+              <div className="error mt-3 text-lg">
+                {errors.text && errors.text.message}
+              </div>
+              <button
+                className="text-[18px] py-2 hover:bg-white hover:text-black  border-4 border-orange-500 cursor-pointer vazir-bold rounded-[15px] p-5 sm:px-7 mx-2 mb-4"
+                type="submit"
+              >
+                ارسال
+              </button>
             </form>
           </div>
           <div className="  w-5/6 p-5 flex flex-col items-end justify-center my-5 md:my-5  border-2 border-orange-500 bg2 rounded-[20px] ">

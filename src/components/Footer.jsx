@@ -10,7 +10,7 @@ export default function Footer() {
               </h4>
               <img
                 className="w-14 h-14 rounded-full"
-                src="/src/asset/images/logo.png"
+                src="images/logo.png"
                 alt="logo"
               />
             </div>
@@ -20,19 +20,19 @@ export default function Footer() {
             <div className=" mt-2 md:my-6 flex-row-center">
               <img
                 className="w-16 h-14 cursor-pointer mx-3"
-                src="/src/asset/images/Telegram.svg"
+                src="images/Telegram.svg"
                 alt=""
               />
 
               <img
                 className="w-16 h-14 cursor-pointer mx-3"
-                src="/src/asset/images/Instagram.svg"
+                src="images/Instagram.svg"
                 alt=""
               />
 
               <img
                 className="w-16 h-14 cursor-pointer mx-3"
-                src="/src/asset/images/WhatsApp.svg"
+                src="images/WhatsApp.svg"
                 alt=""
               />
             </div>
