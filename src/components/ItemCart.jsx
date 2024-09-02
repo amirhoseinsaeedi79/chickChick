@@ -1,99 +1,106 @@
-import { useEffect, useState } from "react";
-import RegisterContext from "../context/register";
-import { useContext } from "react";
+import {
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
+
+import RegisterContext from '../context/register';
+
 export default function ItemCart(items) {
-  const contextitem = useContext(RegisterContext);
+  const context = useContext(RegisterContext);
 
+  const [number, setNumber] = useState(items.q);
 
-  const [number, setNumber] = useState(1);
+  useEffect(() => {
+    items.func();
+  }, [number]);
 
-  useEffect(()=>{
-  items.func()
-  },[number])
-
-  function resultNumber(id, status) {
-
+  function resultNumber() {
     const newItem = {
-      id,
       src: items.src,
       title: items.title,
       ctg: items.ctg,
       name: items.name,
       price: items.price,
-      q: status,
+      q: number,
     };
 
-    fetch(`http://localhost:3000/cart/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/JSON" },
-      body: JSON.stringify(newItem),
-    })
-      .then((res) => res.json())
-      .then((data) => setNumber(data.q));
-
+    const cartItem = JSON.parse(localStorage.getItem("cart"));
+    const indexNumber = cartItem.findIndex((item) => {
+      return item.name === items.name;
+    });
+    cartItem[indexNumber] = newItem;
+    console.log(cartItem);
+    localStorage.setItem("cart", JSON.stringify(cartItem));
   }
 
-
-   function numberadd(id) {
-    resultNumber(id, number + 1)
+  async function increaseNumber() {
+    await setNumber(number + 1);
+    // resultNumber();
   }
 
-  async function numbermines(id) {
-    resultNumber(id, number - 1);
-    if (number == 1) {
-      contextitem.statuditemCart(prev=>prev-1)
-    }
+  async function decreaseNumber() {
+    await setNumber(number - 1);
+    // resultNumber();
   }
 
- async function numberremove(id) {
-  await fetch(`http://localhost:3000/cart/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data)); 
-      items.func()
+  async function removeItem(id) {
+    const cartItem = JSON.parse(localStorage.getItem("cart"));
 
+    const result = cartItem.filter((item) => {
+      return item.name !== id;
+    });
+    localStorage.setItem("cart", JSON.stringify(result));
+
+    context.getAllCart();
   }
+
+  useEffect(() => {
+    return () => {
+      resultNumber();
+    };
+  });
 
   return (
-    <div className="xl:w-[420px] h-[160px] md:h-[190px] xl:h-[220px] flex flex-row  justify-between border-4 border-orange-500 rounded-2xl mx-2 md:mx-5  lg:mx-7 xl:mx-4 mb-5">
-      <div className="w-6/12 xl:w- ">
+    <div className="mx-2 mb-5 flex h-[160px] flex-row justify-between rounded-2xl border-4 border-orange-500 md:mx-5 md:h-[190px] lg:mx-7 xl:mx-4 xl:h-[220px] xl:w-[420px]">
+      <div className="xl:w- w-6/12">
         <img
-          className="w-full h-full  rounded-l-xl border-r-4 border-orange-500 "
+          className="h-full w-full rounded-l-xl border-r-4 border-orange-500"
           src={items.src}
           alt=""
         />
       </div>
-      <div className="w-6/12  flex-col-center  text-white">
-        <div className="text-[19px] md:text-[26px]  vazir-bold  my-2 text-orange-500">
+      <div className="flex-col-center w-6/12 text-white">
+        <div className="vazir-bold my-2 text-[19px] text-orange-500 md:text-[26px]">
           <span>{items.name}</span>
         </div>
-        <div className="vazir text-[15px] md:text-[18px] ">
+        <div className="vazir text-[15px] md:text-[18px]">
           <span>تعداد :</span>
           <span className="vazir-bold mr-2">{number}</span>
         </div>
-        <div className="flex-row-center vazir ">
+        <div className="flex-row-center vazir">
           <button
-            onClick={() => numberadd(items.id)}
-            className="text-[23px] xl:text-[28px] mx-2"
+            onClick={() => increaseNumber()}
+            className="mx-2 text-[23px] xl:text-[28px]"
           >
             +
           </button>
           <button
-            onClick={() => numbermines(items.id)}
-            className="text-[25px] xl:text-[28px] mx-2"
+            onClick={() => decreaseNumber()}
+            className="mx-2 text-[25px] xl:text-[28px]"
+            disabled={number == 1}
           >
             -
           </button>
           <button>
             <svg
-              onClick={() => numberremove(items.id)}
+              onClick={() => removeItem(items.name)}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-5 h-5 mx-2"
+              className="mx-2 h-5 w-5"
             >
               <path
                 strokeLinecap="round"
@@ -103,7 +110,7 @@ export default function ItemCart(items) {
             </svg>
           </button>
         </div>
-        <div className="flex-row-center text-[13px] md:text-[17px] xl:text-[20px]  vazir mb-1">
+        <div className="flex-row-center vazir mb-1 text-[13px] md:text-[17px] xl:text-[20px]">
           <span>تومان</span>
           <span className="ml-1">{items.price * number}</span>
         </div>

@@ -1,29 +1,41 @@
-import Footer from "./components/Footer.jsx";
-import GotoUp from "./components/GotoUp.jsx";
-import Navbar from "./components/Navbar.jsx";
-import routes from "./routes.jsx";
-import { useRoutes,useLocation } from "react-router";
-import RegisterContext from "./context/register.jsx";
-import { useState, useEffect } from "react";
+import {
+  useEffect,
+  useState,
+} from 'react';
+
+import {
+  useLocation,
+  useRoutes,
+} from 'react-router';
+
+import Footer from './components/Footer.jsx';
+import GotoUp from './components/GotoUp.jsx';
+import Navbar from './components/Navbar.jsx';
+import RegisterContext from './context/register.jsx';
+import routes from './routes.jsx';
 
 export default function App() {
-
   const [pishmenu, setPishmenu] = useState([]);
   const [galery, setGalery] = useState([]);
   const [isLoggin, setIsLoggin] = useState(false);
-  const  {pathname :location}=useLocation()
-
-useEffect(() =>{
-  window.scrollTo(0,0)
-},[location])
-
- function username(){
-  const username = JSON.parse(localStorage.getItem("user"))
-  return (username.name)
- }
+  const [allcart, setAllcart] = useState([]);
+  const [price, setAllprice] = useState(0);
+  const { pathname: location } = useLocation();
 
   useEffect(() => {
-    
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  function username() {
+    const username = JSON.parse(localStorage.getItem("user"));
+    return username.name;
+  }
+
+  const getAllPrice = (a) => {
+    setAllprice(a);
+  };
+
+  useEffect(() => {
     fetch("https://chickchick-server.liara.run/images")
       .then((res) => res.json())
       .then((data) => {
@@ -41,8 +53,16 @@ useEffect(() =>{
         });
         setGalery(isitem);
       });
+  }, []);
 
-  },[]);
+  const getAllCart = () => {
+    const cartItem = JSON.parse(localStorage.getItem("cart"));
+    setAllcart(cartItem);
+  };
+
+  useEffect(() => {
+    getAllCart();
+  }, []);
 
   useEffect(() => {
     if (window.location.pathname === "/") {
@@ -80,21 +100,22 @@ useEffect(() =>{
   function logout() {
     localStorage.removeItem("user");
     setIsLoggin(false);
-    console.log("isloggin:", isLoggin);
   }
   let router = useRoutes(routes);
-
-  console.log('isLoggin :' , isLoggin);
 
   return (
     <RegisterContext.Provider
       value={{
         isLoggin,
+        allcart,
         login,
         logout,
+        price,
         pishmenu,
+        getAllPrice,
         galery,
         username,
+        getAllCart,
       }}
     >
       <Navbar />

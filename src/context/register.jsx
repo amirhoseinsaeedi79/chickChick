@@ -1,25 +1,22 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
 const RegisterContext = createContext({
-    isLoggin : false,
-    token : null ,
-    login: () => {},
-    logout: () => {},
-    statusLogin:() => {},
-    pishmenu:[],
-    noshhmenu:[],
-    galery:[],
-    allcart:[],
-    cartHandler : ()=>{},
-    username:()=>{},
-    itemCart:0,
-    statuditemCart:()=>{},
-})
+  isLoggin: false,
+  price: 0,
+  token: null,
+  login: () => {},
+  getAllPrice: () => {},
+  logout: () => {},
+  statusLogin: () => {},
+  pishmenu: [],
+  noshhmenu: [],
+  galery: [],
+  allcart: [],
+  cartHandler: () => {},
+  username: () => {},
+  itemCart: 0,
+  statuditemCart: () => {},
+  getAllCart: () => {},
+});
 
-export default RegisterContext ;
-
-
-
-
-
-
+export default RegisterContext;

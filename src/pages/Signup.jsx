@@ -1,27 +1,27 @@
-import { useForm } from "react-hook-form";
-import { Link, Navigate } from "react-router-dom";
-import RegisterContext from "../context/register";
-import { useContext } from "react";
+import { useContext } from 'react';
 
-import { toast } from "react-toastify";
+import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
+import RegisterContext from '../context/register';
 
 export default function Signup() {
-
   const context = useContext(RegisterContext);
 
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
 
   async function registerHandler(data) {
     const inputData = {
-      name:data.name,
+      name: data.name,
       email: data.email,
       phone: data.phone,
       password: data.password,
+      cart: [],
     };
     fetch("https://chickchick-server.liara.run/users")
       .then((res) => res.json())
@@ -33,9 +33,9 @@ export default function Signup() {
             users.password == data.password
           );
         });
-          if (data.password == data.repeatPassword) {
+        if (data.password == data.repeatPassword) {
           if (!isin) {
-             fetch("https://chickchick-server.liara.run/users", {
+            fetch("https://chickchick-server.liara.run/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
@@ -43,43 +43,44 @@ export default function Signup() {
               body: JSON.stringify(inputData),
             })
               .then((res) => res.json())
-              .then((datas) => {              
-              context.login(datas)
+              .then((datas) => {
+                context.login(datas);
               });
-              toast.success('ثبت نام با موفقیت انجام شد', {
-                position: "top-center",
-                 autoClose: 1500,
-                 hideProgressBar: false,
-                 closeOnClick: true,
-                 pauseOnHover: true,
-                 draggable: true,
-                 progress: undefined,
-                 theme: "colored",
-                 });
-
-          } else {
-            toast.error('این کاربر قبلا ثبت نام کرده است', {
+            toast.success("ثبت نام با موفقیت انجام شد", {
               position: "top-center",
-               autoClose: 1500,
-               hideProgressBar: false,
-               closeOnClick: true,
-               pauseOnHover: true,
-               draggable: true,
-               progress: undefined,
-               theme: "colored",
-               });
+              autoClose: 1500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
+            context.login(inputData);
+            context.statusLogin(true);
+          } else {
+            toast.error("این کاربر قبلا ثبت نام کرده است", {
+              position: "top-center",
+              autoClose: 1500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
           }
         } else {
-          toast.error('رمز عبور و تکرار آن برابر نیست ', {
+          toast.error("رمز عبور و تکرار آن برابر نیست ", {
             position: "top-center",
-             autoClose: 1500,
-             hideProgressBar: false,
-             closeOnClick: true,
-             pauseOnHover: true,
-             draggable: true,
-             progress: undefined,
-             theme: "colored",
-             });
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
         }
       });
   }
@@ -87,57 +88,57 @@ export default function Signup() {
   return (
     <>
       {!context.isLoggin ? (
-        <div className=" bgCompany pt-36 pb-20 ">
-          <div className=" w-full flex flex-col items-center  ">
+        <div className="bgCompany pb-20 pt-36">
+          <div className="flex w-full flex-col items-center">
             <form
               onSubmit={handleSubmit(registerHandler)}
-              className="w-11/12  md:w-7/12 lg:w-5/12 flex-col-center border-2 bg2 border-orange-500 rounded-[20px] md:text-xl text-md"
+              className="flex-col-center bg2 text-md w-11/12 rounded-[20px] border-2 border-orange-500 md:w-7/12 md:text-xl lg:w-5/12"
             >
-              <span className="text-orange-500 vazir-bold text-[26px] md:text-[28px] mt-5">
+              <span className="vazir-bold mt-5 text-[26px] text-orange-500 md:text-[28px]">
                 ثبت نام
               </span>
               <label
-                className=" w-full text-right mr-14 md:mr-28 text-white text-[16px] vazir-bold mb-3 mt-3"
+                className="vazir-bold mb-3 mr-14 mt-3 w-full text-right text-[16px] text-white md:mr-28"
                 htmlFor="#username"
               >
                 :نام کاربری
               </label>
               <input
-                className="w-[85%] h-12 rounded-[10px] mb-3 border-4 border-orange-500 focus:outline-0 px-4 text-xl "
+                className="mb-3 h-12 w-[85%] rounded-[10px] border-4 border-orange-500 px-4 text-xl focus:outline-0"
                 id="username"
                 type="text"
                 {...register("name", {
                   required: "وارد کردن نام اجباریست",
                 })}
               />
-              <div className="error ">
+              <div className="error">
                 {errors.email && errors.email.message}
               </div>
               <label
-                className=" w-full text-right mr-14 md:mr-28 text-white text-[16px]  vazir-bold mb-3 "
+                className="vazir-bold mb-3 mr-14 w-full text-right text-[16px] text-white md:mr-28"
                 htmlFor="#username"
               >
                 : ایمیل
               </label>
               <input
-                className="w-[85%] h-12 rounded-[10px] mb-3 border-4 border-orange-500 focus:outline-0 px-4 text-xl "
+                className="mb-3 h-12 w-[85%] rounded-[10px] border-4 border-orange-500 px-4 text-xl focus:outline-0"
                 id="username"
                 type="email"
                 {...register("email", {
                   required: "وارد کردن ایمیل اجباریست",
                 })}
               />
-              <div className="error ">
+              <div className="error">
                 {errors.email && errors.email.message}
               </div>
               <label
-                className=" w-full text-right mr-14 md:mr-28  text-white text-[16px]  vazir-bold mb-3"
+                className="vazir-bold mb-3 mr-14 w-full text-right text-[16px] text-white md:mr-28"
                 htmlFor="#number"
               >
                 : شماره تماس
               </label>
               <input
-                className="w-[85%] h-12 rounded-[10px] mb-3 border-4 border-orange-500 focus:outline-0 px-4 text-xl"
+                className="mb-3 h-12 w-[85%] rounded-[10px] border-4 border-orange-500 px-4 text-xl focus:outline-0"
                 id="number"
                 type="text"
                 {...register("phone", {
@@ -152,17 +153,17 @@ export default function Signup() {
                   },
                 })}
               />
-              <div className="error ">
+              <div className="error">
                 {errors.phone && errors.phone.message}
               </div>
               <label
-                className=" w-full text-right mr-14 md:mr-28  text-white text-[16px]  vazir-bold mb-3"
+                className="vazir-bold mb-3 mr-14 w-full text-right text-[16px] text-white md:mr-28"
                 htmlFor="#password"
               >
                 : کلمه عبور
               </label>
               <input
-                className="w-[85%] h-12 rounded-[10px] mb-3 border-4 border-orange-500 focus:outline-0 px-4 text-xl"
+                className="mb-3 h-12 w-[85%] rounded-[10px] border-4 border-orange-500 px-4 text-xl focus:outline-0"
                 id="password"
                 type="password"
                 {...register("password", {
@@ -173,17 +174,17 @@ export default function Signup() {
                   },
                 })}
               />
-              <div className="error ">
+              <div className="error">
                 {errors.password && errors.password.message}
               </div>
               <label
-                className=" w-full text-right mr-14 md:mr-28  text-white text-[16px]  vazir-bold mb-3"
+                className="vazir-bold mb-3 mr-14 w-full text-right text-[16px] text-white md:mr-28"
                 htmlFor="#password2"
               >
                 : تکرار کلمه عبور
               </label>
               <input
-                className="w-[85%] h-12 rounded-[10px] mb-3 border-4 border-orange-500 focus:outline-0 px-4 text-xl"
+                className="mb-3 h-12 w-[85%] rounded-[10px] border-4 border-orange-500 px-4 text-xl focus:outline-0"
                 id="password2"
                 type="password"
                 {...register("repeatPassword", {
@@ -198,25 +199,23 @@ export default function Signup() {
                 {errors.repeatPassword && errors.repeatPassword.message}
               </div>
               <input
-                className="py-2 px-5 mb-3 bg-white rounded-[10px]  text-[18px] vazir-bold cursor-pointer border-4 border-orange-500"
+                className="vazir-bold mb-3 cursor-pointer rounded-[10px] border-4 border-orange-500 bg-white px-5 py-2 text-[18px]"
                 type="submit"
                 value={"ثبت نام"}
               />
-              <div className="w-full text-right py-5 text-white text-xl vazir-bold mb-3 ">
-                <div className="flex-row-center text-[16px] md:text-[18px] text-center">
-                  <Link to="/Login" className="text-orange-500 cursor-pointer ">
+              <div className="vazir-bold mb-3 w-full py-5 text-right text-xl text-white">
+                <div className="flex-row-center text-center text-[16px] md:text-[18px]">
+                  <Link to="/Login" className="cursor-pointer text-orange-500">
                     وارد شوید
                   </Link>
-                  <span className="ml-3 ">حساب کاربری دارید ؟</span>
+                  <span className="ml-3">حساب کاربری دارید ؟</span>
                 </div>
               </div>
             </form>
           </div>
         </div>
       ) : (
-        <>
-        {history.back()}
-        </>
+        <>{history.back()}</>
       )}
     </>
   );
