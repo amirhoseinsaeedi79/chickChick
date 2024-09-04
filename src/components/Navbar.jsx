@@ -1,8 +1,17 @@
-import { useEffect, useState } from "react";
-import { Link, Navigate, useLocation } from "react-router-dom";
-import RegisterContext from "../context/register";
-import { useContext } from "react";
-import { toast } from "react-toastify";
+import {
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
+
+import {
+  Link,
+  Navigate,
+  useLocation,
+} from 'react-router-dom';
+import { toast } from 'react-toastify';
+
+import RegisterContext from '../context/register';
 
 export default function Navbar() {
   const [menu, setMenu] = useState("hidden");
@@ -48,11 +57,11 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="w-full fixed top-0 pb-1 md:pb-0 z-50 bg-[url(./asset/images/body.jpg)] ">
-        <div className=" lg:container  flex flex-row justify-between  ">
+      <nav className="fixed top-0 z-50 w-full bg-[url(./asset/images/body.jpg)] pb-1 md:pb-0">
+        <div className="flex flex-row justify-between lg:container">
           {/* ================================================================================= icon navbar-left */}
           {context.isLoggin ? (
-            <div className="flex flex-row justify-between lg:pt-2 relative">
+            <div className="relative flex flex-row justify-between lg:pt-2">
               <Link onMouseOver={hoverUserIn} onMouseOut={hoverUserOut}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +69,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="cursor-pointer w-8 h-12 lg:w-9 h-19 ml-[15px] lg:ml-[30px] hover:!text-orange-500"
+                  className="h-19 ml-[15px] h-12 w-8 cursor-pointer hover:!text-orange-500 lg:ml-[30px] lg:w-9"
                 >
                   <path
                     strokeLinecap="round"
@@ -76,7 +85,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className=" cursor-pointer w-8 h-12 lg:w-9 h-19 ml-[15px] lg:ml-[30px] hover:!text-orange-500"
+                  className="h-19 ml-[15px] h-12 w-8 cursor-pointer hover:!text-orange-500 lg:ml-[30px] lg:w-9"
                 >
                   <path
                     strokeLinecap="round"
@@ -92,7 +101,7 @@ export default function Navbar() {
                 className={`bg-[url(./asset/images/body.jpg)] z-10  ${loginmenu}  flex-col items-end fixed top-[70px] left-[10px] p-2 rounded-xl border-2 border-orange-500`}
               >
                 <div className="flex-row-center pb-2">
-                  <span className="text-lg vazir-bold ">
+                  <span className="vazir-bold text-lg">
                     {context.username()}
                   </span>
                   <div>
@@ -102,7 +111,7 @@ export default function Navbar() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-8 h-8 ml-1"
+                      className="ml-1 h-8 w-8"
                     >
                       <path
                         strokeLinecap="round"
@@ -112,10 +121,10 @@ export default function Navbar() {
                     </svg>
                   </div>
                 </div>
-                <hr className="w-full h-[3px] bg-orange-500" />
+                <hr className="h-[3px] w-full bg-orange-500" />
 
-                <div className="flex-row-center mt-3 hover:text-orange-500 cursor-pointer">
-                  <Link to="/cart" className="text-lg vazir-bold ">
+                <div className="flex-row-center mt-3 cursor-pointer hover:text-orange-500">
+                  <Link to="/cart" className="vazir-bold text-lg">
                     سبد خرید شما
                   </Link>
                   <div className="ml-2">
@@ -125,7 +134,7 @@ export default function Navbar() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-8 h-8"
+                      className="h-8 w-8"
                     >
                       <path
                         strokeLinecap="round"
@@ -151,9 +160,9 @@ export default function Navbar() {
 
                     <Navigate to="/" />;
                   }}
-                  className="flex-row-center mt-2 mb-1 hover:text-orange-500 cursor-pointer"
+                  className="flex-row-center mb-1 mt-2 cursor-pointer hover:text-orange-500"
                 >
-                  <span className="text-lg vazir-bold  ">خروج از حساب</span>
+                  <span className="vazir-bold text-lg">خروج از حساب</span>
                   <div className="ml-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +170,7 @@ export default function Navbar() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-8 h-8"
+                      className="h-8 w-8"
                     >
                       <path
                         strokeLinecap="round"
@@ -174,7 +183,7 @@ export default function Navbar() {
               </div>
             </div>
           ) : (
-            <div className="flex flex-row justify-between lg:pt-2 relative">
+            <div className="relative flex flex-row justify-between lg:pt-2">
               <Link to="/Login">
                 <svg
                   onClick={userHandler}
@@ -183,7 +192,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="cursor-pointer w-8 h-12 mt-[5px] lg:w-9 h-19 ml-[15px] lg:ml-[30px] hover:!text-orange-500"
+                  className="h-19 ml-[15px] mt-[5px] h-12 w-8 cursor-pointer hover:!text-orange-500 lg:ml-[30px] lg:w-9"
                 >
                   <path
                     strokeLinecap="round"
@@ -199,7 +208,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className=" cursor-pointer w-8 h-12 mt-[5px] lg:w-9 h-19 ml-[15px] lg:ml-[30px] hover:!text-orange-500"
+                  className="h-19 ml-[15px] mt-[5px] h-12 w-8 cursor-pointer hover:!text-orange-500 lg:ml-[30px] lg:w-9"
                 >
                   <path
                     strokeLinecap="round"
@@ -212,65 +221,65 @@ export default function Navbar() {
           )}
 
           {/* =================================================================================  navbar-center */}
-          <div className=" hidden lg:flex-row-center relative ">
+          <div className="lg:flex-row-center relative hidden">
             <Link
               onClick={upHandler}
               to="/pish"
-              className=" lg:text-[20px] text-black vazir-bold mx-7 my-5 hover:text-orange-300"
+              className="vazir-bold mx-7 my-5 text-black hover:text-orange-300 lg:text-[20px]"
             >
               منو
             </Link>
             <Link
               onClick={upHandler}
               to="/gallery"
-              className=" lg:text-[20px] vazir-bold mx-7 my-5 text-black hover:text-orange-500 "
+              className="vazir-bold mx-7 my-5 text-black hover:text-orange-500 lg:text-[20px]"
             >
               گالری
             </Link>
             <Link
               onClick={upHandler}
               to="/Branches"
-              className="lg:text-[20px] vazir-bold mx-7 my-5 text-black hover:text-orange-500"
+              className="vazir-bold mx-7 my-5 text-black hover:text-orange-500 lg:text-[20px]"
             >
               شعبه ها
             </Link>
             <Link
               onClick={upHandler}
               to="/Call"
-              className=" lg:text-[20px] vazir-bold mx-7 my-5 text-black  hover:text-orange-500"
+              className="vazir-bold mx-7 my-5 text-black hover:text-orange-500 lg:text-[20px]"
             >
               تماس با ما
             </Link>
             <Link
               onClick={upHandler}
               to="/About"
-              className=" lg:text-[20px] vazir-bold mx-7 my-5 text-black  hover:text-orange-500"
+              className="vazir-bold mx-7 my-5 text-black hover:text-orange-500 lg:text-[20px]"
             >
               درباره ما
             </Link>
             <Link
               onClick={upHandler}
               to="/"
-              className=" lg:text-[20px] vazir-bold mx-7 my-5 text-black  hover:text-orange-500"
+              className="vazir-bold mx-7 my-5 text-black hover:text-orange-500 lg:text-[20px]"
             >
               خانه
             </Link>
           </div>
           {/* =================================================================================  navbarLogo */}
-          <div className=" lg:hidden ">
+          <Link to="/" className="lg:hidden">
             <img
-              className=" cursor-pointer w-[52px] h-[52px] mt-[2px] mr-8 rounded-full"
+              className="mr-8 mt-[2px] h-[52px] w-[52px] cursor-pointer rounded-full"
               src="images/logo.png"
               alt="logo"
             />
-          </div>
-          <div className=" cursor-pointer hidden  lg:flex flex-row justify-between">
+          </Link>
+          <Link to="/" className="hidden cursor-pointer flex-row justify-between lg:flex">
             <img
-              className="lg:w-[75px] h-[75px] mr-8 rounded-full"
+              className="mr-8 h-[75px] rounded-full lg:w-[75px]"
               src="images/logo.png"
               alt="logo"
             />
-          </div>
+          </Link>
           {/* ================================================================================= icon menu in navbar */}
           <div
             onClick={menuHandler}
@@ -282,7 +291,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className=" w-8 h-12 mr-4 cursor-pointer mt-[5px] hover:!text-orange-500 "
+              className="mr-4 mt-[5px] h-12 w-8 cursor-pointer hover:!text-orange-500"
             >
               <path
                 strokeLinecap="round"
@@ -295,9 +304,9 @@ export default function Navbar() {
           <div
             className={`${menu} flex-col bgcall  w-[290px] min-h-screen fixed top-0 right-0 z-10 border-2 border-orange-500  `}
           >
-            <div className="flex-col-center pt-3  relative">
+            <div className="flex-col-center relative pt-3">
               <img
-                className=" w-[60px] h-[60px] rounded-full "
+                className="h-[60px] w-[60px] rounded-full"
                 src="images/logo.png"
                 alt=""
               />
@@ -311,7 +320,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-9 h-16 text-white  hover:!text-orange-400 cursor-pointer"
+                  className="h-16 w-9 cursor-pointer text-white hover:!text-orange-400"
                 >
                   <path
                     strokeLinecap="round"
@@ -322,21 +331,21 @@ export default function Navbar() {
               </div>
             </div>
             {/* ================================================================================= hamburgerMenu Items */}
-            <div className="w-full flex flex-col items-end  px-3 mx-auto mt-7">
-              <div className="h-20 relative ">
+            <div className="mx-auto mt-7 flex w-full flex-col items-end px-3">
+              <div className="relative h-20">
                 <Link
                   onClick={menuHandler}
                   to={"/"}
-                  className="w-full flex flex-row items-center justify-end pr-9 absolute text-black hover:text-white "
+                  className="absolute flex w-full flex-row items-center justify-end pr-9 text-black hover:text-white"
                 >
-                  <div className=" text-[20px] font-vazir mr-3 mb-1">خانه</div>
+                  <div className="mb-1 mr-3 font-vazir text-[20px]">خانه</div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-7 h-14 relative bottom-1"
+                    className="relative bottom-1 h-14 w-7"
                   >
                     <path
                       strokeLinecap="round"
@@ -347,7 +356,7 @@ export default function Navbar() {
                 </Link>
                 <div className="z-[-2]">
                   <svg
-                    className="w-full h-12 fill-orange-400 "
+                    className="h-12 w-full fill-orange-400"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
@@ -359,18 +368,18 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="h-20 relative ">
+              <div className="relative h-20">
                 <Link
                   onClick={menuHandler}
                   to={"/pish"}
-                  className="w-full flex flex-row items-center justify-end pr-9 absolute text-black hover:text-white"
+                  className="absolute flex w-full flex-row items-center justify-end pr-9 text-black hover:text-white"
                 >
-                  <div className=" text-[20px] font-vazir mr-3 mb-2">منو</div>
+                  <div className="mb-2 mr-3 font-vazir text-[20px]">منو</div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="w-7 h-14 relative bottom-1"
+                    className="relative bottom-1 h-14 w-7"
                   >
                     <path
                       fillRule="evenodd"
@@ -379,9 +388,9 @@ export default function Navbar() {
                     />
                   </svg>
                 </Link>
-                <div className="z-[-2] ">
+                <div className="z-[-2]">
                   <svg
-                    className="w-full h-12 fill-orange-400"
+                    className="h-12 w-full fill-orange-400"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
@@ -393,20 +402,20 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="h-20 relative  ">
+              <div className="relative h-20">
                 <Link
                   onClick={menuHandler}
                   to={"/Gallery"}
-                  className="w-full flex flex-row items-center justify-end pr-9 absolute text-black hover:text-white "
+                  className="absolute flex w-full flex-row items-center justify-end pr-9 text-black hover:text-white"
                 >
-                  <div className=" text-[20px] font-vazir mr-3 mb-2">گالری</div>
+                  <div className="mb-2 mr-3 font-vazir text-[20px]">گالری</div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-7 h-14 relative bottom-1"
+                    className="relative bottom-1 h-14 w-7"
                   >
                     <path
                       strokeLinecap="round"
@@ -415,9 +424,9 @@ export default function Navbar() {
                     />
                   </svg>
                 </Link>
-                <div className="z-[-2] ">
+                <div className="z-[-2]">
                   <svg
-                    className="w-full h-12 fill-orange-400"
+                    className="h-12 w-full fill-orange-400"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
@@ -429,13 +438,13 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="h-20 relative ">
+              <div className="relative h-20">
                 <Link
                   onClick={menuHandler}
                   to={"/Branches"}
-                  className="w-full flex flex-row items-center justify-end pr-9 absolute text-black hover:text-white"
+                  className="absolute flex w-full flex-row items-center justify-end pr-9 text-black hover:text-white"
                 >
-                  <div className=" text-[20px] font-vazir mr-3 mb-1">
+                  <div className="mb-1 mr-3 font-vazir text-[20px]">
                     شعبه ها
                   </div>
                   <svg
@@ -444,7 +453,7 @@ export default function Navbar() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-7 h-14 relative bottom-1"
+                    className="relative bottom-1 h-14 w-7"
                   >
                     <path
                       strokeLinecap="round"
@@ -453,9 +462,9 @@ export default function Navbar() {
                     />
                   </svg>
                 </Link>
-                <div className="z-[-2] ">
+                <div className="z-[-2]">
                   <svg
-                    className="w-full h-12 fill-orange-400"
+                    className="h-12 w-full fill-orange-400"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
@@ -467,13 +476,13 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="h-20 relative">
+              <div className="relative h-20">
                 <Link
                   onClick={menuHandler}
                   to={"/Call"}
-                  className="w-full flex flex-row items-center justify-end pr-9 absolute text-black hover:text-white "
+                  className="absolute flex w-full flex-row items-center justify-end pr-9 text-black hover:text-white"
                 >
-                  <div className=" text-[20px] font-vazir mr-3 mb-2">
+                  <div className="mb-2 mr-3 font-vazir text-[20px]">
                     تماس باما
                   </div>
                   <svg
@@ -482,7 +491,7 @@ export default function Navbar() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-7 h-14 relative bottom-1"
+                    className="relative bottom-1 h-14 w-7"
                   >
                     <path
                       strokeLinecap="round"
@@ -492,9 +501,9 @@ export default function Navbar() {
                     693
                   </svg>
                 </Link>
-                <div className="z-[-2] ">
+                <div className="z-[-2]">
                   <svg
-                    className="w-full h-12 fill-orange-400"
+                    className="h-12 w-full fill-orange-400"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
@@ -506,13 +515,13 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="h-20 relative ">
+              <div className="relative h-20">
                 <Link
                   onClick={menuHandler}
                   to={"/About"}
-                  className="w-full flex flex-row items-center justify-end pr-9 absolute text-black hover:text-white "
+                  className="absolute flex w-full flex-row items-center justify-end pr-9 text-black hover:text-white"
                 >
-                  <div className=" text-[20px] font-vazir mr-3 mb-2">
+                  <div className="mb-2 mr-3 font-vazir text-[20px]">
                     درباره ما
                   </div>
                   <svg
@@ -521,7 +530,7 @@ export default function Navbar() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-7 h-14 relative bottom-1"
+                    className="relative bottom-1 h-14 w-7"
                   >
                     <path
                       strokeLinecap="round"
@@ -530,9 +539,9 @@ export default function Navbar() {
                     />
                   </svg>
                 </Link>
-                <div className="z-[-2] ">
+                <div className="z-[-2]">
                   <svg
-                    className="w-full h-12 fill-orange-400"
+                    className="h-12 w-full fill-orange-400"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"

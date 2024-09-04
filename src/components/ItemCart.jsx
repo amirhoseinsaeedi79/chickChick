@@ -1,4 +1,5 @@
-import {
+import React, {
+  useCallback,
   useContext,
   useEffect,
   useState,
@@ -8,14 +9,32 @@ import RegisterContext from '../context/register';
 
 export default function ItemCart(items) {
   const context = useContext(RegisterContext);
-
   const [number, setNumber] = useState(items.q);
 
   useEffect(() => {
-    items.func();
-  }, [number]);
+    const cartItem = JSON.parse(localStorage.getItem("cart"));
+    if (cartItem && cartItem.length > 0) {
+      const infoItem = cartItem.find((item) => item.name === items.name);
+      if (infoItem) {
+        setNumber(infoItem.q);
+        resultNumber();
+      }
+    }
+  }, [items.name]);
 
-  function resultNumber() {
+  // useEffect(() => {
+  //   const cartItem = JSON.parse(localStorage.getItem("cart"));
+  //   const alldata = cartItem?.map((item) => {
+  //     return item.price * item.q;
+  //   });
+  //   const result = alldata?.reduce((a, b) => {
+  //     return a + b;
+  //   }, 0);
+
+  //   items.setAllPrice(result);
+  // });
+
+  const resultNumber = useCallback(() => {
     const newItem = {
       src: items.src,
       title: items.title,
@@ -26,40 +45,45 @@ export default function ItemCart(items) {
     };
 
     const cartItem = JSON.parse(localStorage.getItem("cart"));
-    const indexNumber = cartItem.findIndex((item) => {
-      return item.name === items.name;
-    });
+    const indexNumber = cartItem.findIndex((item) => item.name === items.name);
     cartItem[indexNumber] = newItem;
-    console.log(cartItem);
     localStorage.setItem("cart", JSON.stringify(cartItem));
-  }
 
-  async function increaseNumber() {
-    await setNumber(number + 1);
-    // resultNumber();
-  }
-
-  async function decreaseNumber() {
-    await setNumber(number - 1);
-    // resultNumber();
-  }
-
-  async function removeItem(id) {
-    const cartItem = JSON.parse(localStorage.getItem("cart"));
-
-    const result = cartItem.filter((item) => {
-      return item.name !== id;
+    const alldata = cartItem?.map((item) => {
+      return item.price * item.q;
     });
-    localStorage.setItem("cart", JSON.stringify(result));
 
-    context.getAllCart();
-  }
+    const result = alldata?.reduce((a, b) => {
+      return a + b;
+    }, 0);
+
+    context.getAllPrice(result);
+
+  }, [items, number]);
+
+  const increaseNumber = useCallback(() => {
+    setNumber((prevNumber) => prevNumber + 1);
+    resultNumber();
+  }, [resultNumber]);
+
+  const decreaseNumber = useCallback(async () => {
+    setNumber((prevNumber) => prevNumber - 1);
+    resultNumber();
+  }, [resultNumber]);
+
+  const removeItem = useCallback(
+    async (id) => {
+      const cartItem = JSON.parse(localStorage.getItem("cart"));
+      const result = cartItem.filter((item) => item.name !== id);
+      localStorage.setItem("cart", JSON.stringify(result));
+      context.getAllCart();
+    },
+    [context.getAllCart]
+  );
 
   useEffect(() => {
-    return () => {
-      resultNumber();
-    };
-  });
+    resultNumber();
+  }, [resultNumber]);
 
   return (
     <div className="mx-2 mb-5 flex h-[160px] flex-row justify-between rounded-2xl border-4 border-orange-500 md:mx-5 md:h-[190px] lg:mx-7 xl:mx-4 xl:h-[220px] xl:w-[420px]">

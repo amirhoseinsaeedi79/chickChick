@@ -20,11 +20,19 @@ export default function App() {
   const [isLoggin, setIsLoggin] = useState(false);
   const [allcart, setAllcart] = useState([]);
   const [price, setAllprice] = useState(0);
+  const [number, setNumber] = useState(0);
   const { pathname: location } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  const setNewNumber = (num) => {
+    setNumber(num);
+    // localStorage.setItem("cart", JSON.stringify(data));  
+  };
+  
+  console.log("object")
 
   function username() {
     const username = JSON.parse(localStorage.getItem("user"));
@@ -56,6 +64,11 @@ export default function App() {
   }, []);
 
   const getAllCart = () => {
+    const cartItem = JSON.parse(localStorage.getItem("cart"));
+    setAllcart(cartItem);
+  };
+  const setAllCarts = (data) => {
+    localStorage.setItem("cart", JSON.stringify(data));
     const cartItem = JSON.parse(localStorage.getItem("cart"));
     setAllcart(cartItem);
   };
@@ -108,7 +121,9 @@ export default function App() {
       value={{
         isLoggin,
         allcart,
+        number,
         login,
+        setNewNumber,
         logout,
         price,
         pishmenu,
@@ -116,6 +131,7 @@ export default function App() {
         galery,
         username,
         getAllCart,
+        setAllCarts,
       }}
     >
       <Navbar />

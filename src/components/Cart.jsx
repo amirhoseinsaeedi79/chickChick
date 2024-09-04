@@ -9,7 +9,7 @@ import ItemCart from './ItemCart';
 
 export default function Cart() {
   const [allcart, setAllcard] = useState([]);
-  const [allprice, setAllprice] = useState(0);
+  const [price, setAllPrice] = useState(0);
 
   const context = useContext(RegisterContext);
   const cartItem = JSON.parse(localStorage.getItem("cart"));
@@ -21,16 +21,18 @@ export default function Cart() {
     getData();
   }, []);
 
-  useEffect(() => {
-    const alldata = allcart?.map((item) => {
-      return item.price * item.q;
-    });
-    const result = alldata?.reduce((a, b) => {
-      return a + b;
-    }, 0);
+  console.log("14141414");
 
-    setAllprice(result);
-  }, [getData]);
+  // useEffect(() => {
+  //   const cartItem = JSON.parse(localStorage.getItem("cart"));
+  //   const alldata = cartItem?.map((item) => {
+  //     return item.price * item.q;
+  //   });
+  //   const result = alldata?.reduce((a, b) => {
+  //     return a + b;
+  //   }, 0);
+  //   setAllPrice(result);
+  // });
 
   return (
     <>
@@ -78,19 +80,26 @@ export default function Cart() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 xl:ml-5 xl:grid-cols-3">
-                {context.allcart?.map((items) => {
-                  return <ItemCart key={items.id} {...items} func={getData} />;
+                {cartItem?.map((items) => {
+                  return (
+                    <ItemCart
+                      key={items.id}
+                      {...items}
+                      func={getData}
+                      setAllPrice={setAllPrice}
+                    />
+                  );
                 })}
               </div>
               <div className="flex-col-center h-auto w-full border-t-4 border-black bg-orange-500 pb-3 pr-2 pt-5">
-                {/* <div className="vazir-bold flex flex-row-reverse pt-2 text-[18px] md:text-[22px]">
+                <div className="vazir-bold flex flex-row-reverse pt-2 text-[18px] md:text-[22px]">
                   <span className="ml-2">: جمع کل فاکتور</span>
                   <span className="ml-2">{context.price}</span>
                   <span>تومان</span>
-                </div> */}
+                </div>
                 <div className="flex-row-center w-full">
                   <button className="vazir-bold md:pu-2 hover:text- rounded-[25px] border-2 border-black px-3 py-1 text-center text-lg hover:border-white md:px-4 md:text-xl">
-                    مشاهده فاکتور و پرداخت
+                    پرداخت
                   </button>
                 </div>
               </div>

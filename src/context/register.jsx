@@ -3,7 +3,9 @@ import { createContext } from 'react';
 const RegisterContext = createContext({
   isLoggin: false,
   price: 0,
+  number: 0,
   token: null,
+  setNewNumber: () => {},
   login: () => {},
   getAllPrice: () => {},
   logout: () => {},
@@ -15,6 +17,7 @@ const RegisterContext = createContext({
   cartHandler: () => {},
   username: () => {},
   itemCart: 0,
+  setAllCarts: () => {},
   statuditemCart: () => {},
   getAllCart: () => {},
 });

@@ -1,8 +1,8 @@
-import Header from "../components/Header.jsx";
-import MenuHome from "../components/MenuHome.jsx";
-import Service from "../components/Service.jsx";
-import Proposal from "../components/Proposal.jsx";
-import Company from "../components/Company.jsx"
+import Company from '../components/Company.jsx';
+import Header from '../components/Header.jsx';
+import MenuHome from '../components/MenuHome.jsx';
+import Proposal from '../components/Proposal.jsx';
+import Service from '../components/Service.jsx';
 
 export default function Home() {
 
@@ -16,7 +16,7 @@ export default function Home() {
       <MenuHome status={'flex-col-center'}/>
       <Proposal/>
       </div>
-      <div className="bgCompany " >
+      <div className="bgCompany" >
       <Company/>
       </div>
     </>
@@ -67,61 +67,61 @@ export default function Home() {
   
 
 //   return (
-//     <div className=" w-full flex flex-col items-center  bg-[url(images/body2.jpg)] bg-fixed pt-36 pb-20">
-//              <form onSubmit={handleSubmit(tesnewt)} className="w-11/12  md:w-7/12 lg:w-5/12 flex-col-center border-2 bg2 border-orange-500 rounded-[40px] md:text-xl text-md">
-//                <span className="text-orange-500 vazir-bold text-4xl mt-10">
+//     <div className="flex w-full flex-col items-center bg-[url(images/body2.jpg)] bg-fixed pb-20 pt-36">
+//              <form onSubmit={handleSubmit(tesnewt)} className="flex-col-center bg2 text-md w-11/12 rounded-[40px] border-2 border-orange-500 md:w-7/12 md:text-xl lg:w-5/12">
+//                <span className="vazir-bold mt-10 text-4xl text-orange-500">
 //                  ورود به حساب
 //                </span>
 //                <label
-//                  className=" w-full text-right mr-14 md:mr-28 text-white text-xl vazir-bold mb-3 mt-10"
+//                  className="vazir-bold mb-3 mr-14 mt-10 w-full text-right text-xl text-white md:mr-28"
 //                  htmlFor="#username"
                 
 //                >
 //                  : ایمیل
 //                </label>
 //                <input
-//                  className="w-[85%] h-12 rounded-2xl mb-5 border-4 border-orange-500 focus:outline-0 px-4 text-xl "
+//                  className="mb-5 h-12 w-[85%] rounded-2xl border-4 border-orange-500 px-4 text-xl focus:outline-0"
 //                  id="username"
 //                  type="email"
 //                  {...register('email')}
                  
 //                />
 //                <label
-//                  className=" w-full text-right mr-14 md:mr-28 text-white text-xl vazir-bold mb-3"
+//                  className="vazir-bold mb-3 mr-14 w-full text-right text-xl text-white md:mr-28"
 //                  htmlFor="#username"
                 
 //                >
 //                  : شماره تماس
 //                </label>
 //                <input
-//                  className="w-[85%] h-12 rounded-2xl mb-5 border-4 border-orange-500 focus:outline-0 px-4 text-xl "
+//                  className="mb-5 h-12 w-[85%] rounded-2xl border-4 border-orange-500 px-4 text-xl focus:outline-0"
 //                  id="username"
 //                  type="phone"
 //                  {...register('phone')}
                  
 //                />
 //                <label
-//                  className=" w-full text-right mr-14 md:mr-28  text-white text-xl vazir-bold mb-3"
+//                  className="vazir-bold mb-3 mr-14 w-full text-right text-xl text-white md:mr-28"
 //                  htmlFor="#password"
 //                >
 //                  : کلمه عبور
 //                </label>
 //                <input
-//                  className="w-[85%] h-12 rounded-2xl mb-5 border-4 border-orange-500 focus:outline-0 px-4 text-xl"
+//                  className="mb-5 h-12 w-[85%] rounded-2xl border-4 border-orange-500 px-4 text-xl focus:outline-0"
 //                  id="password"
 //                  type="password"
 //                  {...register('password')}
 //                />
 //                <input
-//                  className="py-2 px-6 mb-5 bg-white rounded-3xl  text-xl vazir-bold cursor-pointer border-4 border-orange-500"
+//                  className="vazir-bold mb-5 cursor-pointer rounded-3xl border-4 border-orange-500 bg-white px-6 py-2 text-xl"
 //                  type="submit"
 //                  value={"ورود "}
 //                />
-//                <div className="w-full text-right py-5 text-white text-xl vazir-bold mb-3 ">
-//                  <div className="flex-col-center text-[15px] md:text-xl text-center">
+//                <div className="vazir-bold mb-3 w-full py-5 text-right text-xl text-white">
+//                  <div className="flex-col-center text-center text-[15px] md:text-xl">
 //                    <div className="flex-row-center">
-//                    <Link to='/Signup' className="text-orange-500 cursor-pointer ">ثبت نام کنید</Link>
-//                    <span  className="ml-3 ">حساب کاربری ندارید ؟</span>
+//                    <Link to='/Signup' className="cursor-pointer text-orange-500">ثبت نام کنید</Link>
+//                    <span  className="ml-3">حساب کاربری ندارید ؟</span>
 //                    </div>
 //                   <div className="mt-5 text-orange-500">
 //                   <Link to='/Forgoat'  className="cursor-pointer">فراموشی رمز عبور</Link>
