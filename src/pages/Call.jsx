@@ -13,7 +13,7 @@ export default function Call() {
 
   const registerHandler = async () => {
     const alldata = getValues();
-    fetch("https://chickchick-server.liara.run/comments", {
+    fetch("http://localhost:3000/comments", {
       method: "POST",
       headers: {
         "content-type": "application/json",

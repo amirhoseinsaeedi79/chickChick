@@ -1,11 +1,13 @@
-import {
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { useContext, useEffect, useState } from "react";
 
-import RegisterContext from '../context/register';
-import ItemCart from './ItemCart';
+import RegisterContext from "../context/register";
+import ItemCart from "./ItemCart";
+
+// this icon for every cart in this project
+
+// import { FaStar } from "react-icons/fa";
+
+
 
 export default function Cart() {
   const [allcart, setAllcard] = useState([]);

@@ -23,7 +23,7 @@ export default function Signup() {
       password: data.password,
       cart: [],
     };
-    fetch("https://chickchick-server.liara.run/users")
+    fetch("http://localhost:3000/users")
       .then((res) => res.json())
       .then((alluser) => {
         let isin = alluser.some((users) => {
@@ -35,7 +35,7 @@ export default function Signup() {
         });
         if (data.password == data.repeatPassword) {
           if (!isin) {
-            fetch("https://chickchick-server.liara.run/users", {
+            fetch("http://localhost:3000/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
